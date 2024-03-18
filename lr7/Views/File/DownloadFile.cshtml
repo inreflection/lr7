@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Download File";
+}
+
+<h1>Download File</h1>
+
+<form asp-action="DownloadFile" method="post">
+    <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input id="firstName" name="firstName" class="form-control" />
+        <span class="text-danger">@(ViewData.ModelState["firstName"])</span>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" name="lastName" class="form-control" />
+        <span class="text-danger">@(ViewData.ModelState["lastName"])</span>
+    </div>
+    <div class="form-group">
+        <label for="fileName">File Name:</label>
+        <input id="fileName" name="fileName" class="form-control" />
+        <span class="text-danger">@(ViewData.ModelState["fileName"])</span>
+    </div>
+    <button type="submit" class="btn btn-primary">Continue</button>
+</form>
